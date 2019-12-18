@@ -1,10 +1,12 @@
 package ssh.springframework.mypetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import ssh.springframework.mypetclinic.model.Pet;
 import ssh.springframework.mypetclinic.services.PetService;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
