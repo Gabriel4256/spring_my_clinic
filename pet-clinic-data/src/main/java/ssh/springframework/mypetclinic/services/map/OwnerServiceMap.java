@@ -1,11 +1,17 @@
 package ssh.springframework.mypetclinic.services.map;
 
 import ssh.springframework.mypetclinic.model.Owner;
-import ssh.springframework.mypetclinic.services.CrudService;
+import ssh.springframework.mypetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
+
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
